@@ -55,28 +55,29 @@ async function mainQuestionsList() {
         // Call the appropriate function depending on what the user chose
         switch (choice) {
             case "VIEW_EMPLOYEES":
-                viewEmployees();
+                await viewEmployees();
                 break;
             case "ADD_EMPLOYEE":
-                addEmployee();
+                await addEmployee();
                 break;
             case "UPDATE_EMPLOYEE_ROLE":
-                updateEmployeeRole();
+                await updateEmployeeRole();
                 break;
             case "VIEW_DEPARTMENTS":
-                viewDepartments();
+                await viewDepartments();
                 break;
             case "ADD_DEPARTMENT":
-                addDepartment();
+                await addDepartment();
                 break;
             case "VIEW_ROLES":
-                viewRoles();
+                await viewRoles();
                 break;
             case "ADD_ROLE":
-                addRole();
+                await addRole();
                 break;
-            default:
+            case "QUIT":
                 quit();
+                return;
         }
     } catch (err) {
         console.error(err);
